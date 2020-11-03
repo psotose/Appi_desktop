@@ -18,9 +18,7 @@ class PhraseGenerator < ApplicationService
   end
 
   def get_phrase()
-    @phrases[0]['text']
-    @phrases[rand(@phrases.count)]['text']
-    
+    @phrases[rand(@phrases.count)]['text'] 
   end  
 
 end  
