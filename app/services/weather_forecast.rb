@@ -13,7 +13,7 @@ class WeatherForecast < ApplicationService
       http.verify_mode = OpenSSL::SSL::VERIFY_NONE 
       request = Net::HTTP::Get.new(url)
       request["x-rapidapi-host"] = 'community-open-weather-map.p.rapidapi.com'
-      request["x-rapidapi-key"] = 'bec1ff373cmsh0698a70e7d37776p1f39fbjsn790a2ff3e39e'
+      request["x-rapidapi-key"] = ENV['RAPIDAPI']
       response = http.request(request)
       puts response.code
       puts response.read_body 
